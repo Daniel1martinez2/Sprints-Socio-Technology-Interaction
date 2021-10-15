@@ -1,0 +1,28 @@
+table {
+    white-space: nowrap;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.td {
+    border: 1px solid #5E646B;
+    color: #ecf0f3;
+    padding: .5em;
+    
+}
+
+
+
+.tr-table:hover{
+    background-color: #2d343b;
+}
+
+.tfoot {
+
+    outline: 1px solid #1B1F24;
+    background-color: #5E646B;
+    color: #ecf0f3;
+}

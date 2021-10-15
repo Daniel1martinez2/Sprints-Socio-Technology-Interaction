@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;800&display=swap');
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #0DC68A;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::selection {
+  color: white;
+  background: #0DC68A;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #121418;
+}
+
+.sprints-container{
   display: flex;
   flex-direction: column;
+  gap: 2em; 
+  padding: 2em; ;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sprint{
+  max-width: 1010px;
+  width: 100%; 
+  background-color: #1B1F24;
+  padding:2em; 
+  border-radius: 8px; 
+  display: flex;
+  flex-direction: column;
+  gap: 1em; 
+}
+.sprint h2{
+  color: #ecf0f3; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select{
+  display: grid;
+  appearance: none;
+  padding: .2em;
+  border-radius: 4px;
+  margin: 0;
+  color: #ecf0f3; 
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  cursor: pointer;
+  background-image: url(./img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-color: #1B1F24;
+  border: 1px solid #5E646B;
+}
+
+.select option{
+  color: #ecf0f3; 
+}
+
+button{
+  background: #262C33;
+  padding: .3em .5em; 
+  border-radius: 8px;
+	color: #0DC68A;
+	border: none;
+	font: inherit;
+  font-weight: bold;
+	cursor: pointer;
+	outline: inherit;
+  
+}
+
+
+.important{
+  color: #F6A513; 
+}
+
+.sprint1 form{
+  display: flex;
+  justify-content: space-between;
+}
+.sprint1 form button{
+  width: 30%
+}
+.sprint1 form select{
+  width: 30%; 
+}
+
+.sprint2__info{
+  display: flex;
+  justify-content: space-between;
+  gap: .5em; 
+
+}
+.sprint2__result{
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
+  justify-content: center; 
+  align-items: center;
+}
+.sprint2__actions{
+  height: 100%; 
+  display: flex; 
+  flex-direction: column;
+  gap: 1em; 
+  width: 50%; 
+}
+
+.sprint3 form{
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+}
+
+.sprint3 form label{  
+  display: flex; 
+  gap: .5em;
+  flex-direction: column; 
+  width: 30%; 
+  justify-content: space-between; 
+}
+
+.sprint3 form label span{
+  color: #5E646B; 
+}
+
+.input-number{
+  color: #ecf0f3; 
+  padding: .2em;
+  border-radius: 4px;
+  background-color: #1B1F24;
+  font-size: 16px;
+  border: 1px solid #5E646B;
+  padding-left: .5em;
+  outline: none; 
+}
+
+.sprint3 form button{
+  width: 30%;
+  height: 32.1px; 
+}
+
+.sprint3 h3{
+  color: #F6A513; 
+}
+
+.sprint3 ol{
+  color: #ecf0f3; 
+  display: flex;
+  flex-direction: column; 
+  gap: .53em; 
+  padding-left: 1em;
+
 }

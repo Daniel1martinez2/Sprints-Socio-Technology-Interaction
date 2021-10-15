@@ -1,0 +1,26 @@
+.visualization-container{
+  padding: 1em; 
+  /* background-color: blue; */
+  width:100%; 
+  overflow: scroll; 
+}
+.visualization{
+  background-color: red;
+  width: 1800%; 
+  height: 100px; 
+  position: relative; 
+}
+
+.example{
+  width: 100px; 
+  height: 100%; 
+  position: absolute; 
+  background-color: green;
+  border: 3px solid black; 
+  /* left: 100%;  */
+  /* transform: translate(-100%, 0); */
+  opacity: .9;
+}
+.example:hover{
+  background-color: rgb(8, 99, 8);
+}
