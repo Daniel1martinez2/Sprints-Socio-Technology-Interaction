@@ -1,8 +1,8 @@
 {
   "name": "sprints-react",
-  "homepage": "https://daniel1martinez2.github.io/Sprints-Socio-Technology-Interaction/",
+  "homepage": "https://Daniel1martinez2.github.io/Sprints-Socio-Technology-Interaction/",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
