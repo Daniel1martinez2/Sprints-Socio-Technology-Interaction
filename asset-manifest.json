@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Sprints-Socio-Technology-Interaction/static/css/main.7c073516.chunk.css",
+    "main.js": "/Sprints-Socio-Technology-Interaction/static/js/main.664d5b6d.chunk.js",
+    "main.js.map": "/Sprints-Socio-Technology-Interaction/static/js/main.664d5b6d.chunk.js.map",
+    "runtime-main.js": "/Sprints-Socio-Technology-Interaction/static/js/runtime-main.4b7bb7ed.js",
+    "runtime-main.js.map": "/Sprints-Socio-Technology-Interaction/static/js/runtime-main.4b7bb7ed.js.map",
+    "static/js/2.7f7f1618.chunk.js": "/Sprints-Socio-Technology-Interaction/static/js/2.7f7f1618.chunk.js",
+    "static/js/2.7f7f1618.chunk.js.map": "/Sprints-Socio-Technology-Interaction/static/js/2.7f7f1618.chunk.js.map",
+    "index.html": "/Sprints-Socio-Technology-Interaction/index.html",
+    "static/css/main.7c073516.chunk.css.map": "/Sprints-Socio-Technology-Interaction/static/css/main.7c073516.chunk.css.map",
+    "static/js/2.7f7f1618.chunk.js.LICENSE.txt": "/Sprints-Socio-Technology-Interaction/static/js/2.7f7f1618.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Sprints-Socio-Technology-Interaction/static/media/arrow.e351afa2.svg",
+    "static/media/sp3.f237e02f.csv": "/Sprints-Socio-Technology-Interaction/static/media/sp3.f237e02f.csv"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b7bb7ed.js",
+    "static/js/2.7f7f1618.chunk.js",
+    "static/css/main.7c073516.chunk.css",
+    "static/js/main.664d5b6d.chunk.js"
+  ]
+}
