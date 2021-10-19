@@ -1,7 +1,7 @@
-import React, {Fragment, useState} from 'react'; 
+import React, {useState} from 'react'; 
 import NamesInput from './NamesInput'; 
 import {cosineSimilarityFunc} from './CosenusSimilarity/cosenus'; 
-import { checkAngle, fixedSim } from './CosenusSimilarity/checkAngle'; 
+import { checkAngle} from './CosenusSimilarity/checkAngle'; 
 
 
 const Sprint2 = ({data}) => {
@@ -21,24 +21,19 @@ const Sprint2 = ({data}) => {
   const handleButtonClick = () => {
     setIsFixed(false); 
     const dataArray = data.parsedData.filter(name => name[nameHeader]===inputValues.input1 || name[nameHeader]===inputValues.input2);
-    console.log(dataArray, '😔😔😔'); 
+    // console.log(dataArray, '😔😔😔'); 
     if (dataArray.length === 1){
       setSimilarityPercentage(100); 
       return; 
     }
-    //------
+
     if(checkAngle(dataArray)){
-      setSimilarityPercentage(fixedSim(dataArray)); 
+      // setSimilarityPercentage(fixedSim(dataArray)); 
       setIsFixed(true); 
-      return; 
-    }
-    
-  
-
+      // return; 
+    }; 
     const similarityConstant = cosineSimilarityFunc(dataArray); 
-    const finalResult = similarityConstant * 100; 
-
-    setSimilarityPercentage(finalResult); 
+    setSimilarityPercentage(similarityConstant); 
   }
   return(
     <div className="sprint sprint2">
@@ -50,7 +45,7 @@ const Sprint2 = ({data}) => {
           <button onClick={handleButtonClick}>Submit</button>
         </div>
         <div className="sprint2__result">
-          <h1 className="important">{similarityPercentage.toFixed(0)}%</h1>
+          <h1 className="important">{similarityPercentage.toFixed(1)}%</h1>
           <h3 style={{color: '#ecf0f3'}}>{isFixed&& 'Fixed'}</h3>
         </div>
       </div>

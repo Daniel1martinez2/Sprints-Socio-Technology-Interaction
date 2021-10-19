@@ -154,11 +154,11 @@ button{
   color: #F6A513; 
 }
 
-.sprint3 ol{
+.sprint3 ul{
   color: #ecf0f3; 
   display: flex;
   flex-direction: column; 
   gap: .53em; 
-  padding-left: 1em;
+  list-style: none;
 
 }

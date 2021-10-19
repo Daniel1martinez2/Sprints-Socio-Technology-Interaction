@@ -13,13 +13,11 @@ export const checkAngle = ([rowA, rowB]) => {
   rowANormalized.forEach((item,i) => {
     final =+ (item - rowBNormalized[i]); 
   });   
-  // console.log({rowANormalized,rowBNormalized});
-  // console.log(final);
   return final === 0? true : false;
 }; 
 export const fixedSim = ([rowA, rowB]) => {
   const a = getMagnitude(rowA); 
   const b = getMagnitude(rowB); 
   console.log(a,b);
-  return a === b ? 100 : (Math.abs(a - b) / Math.max(a, b))*100; 
+  return a === b ? 1 : (Math.abs(a - b) / Math.max(a, b)); 
 }

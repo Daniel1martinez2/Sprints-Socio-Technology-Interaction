@@ -6,11 +6,13 @@ const Visualization = ({neighbors}) => {
   return (
     <div className={styles['visualization-container']}>
       <div className={styles['visualization']}>
+        <h1 className={styles['indicator']}>100%</h1>
         {neighbors.map(elem => (
           <div 
+            key={Math.random()}
             style={{
-              left: `${((elem.tie)*100).toFixed(3)}%`,
-              transform: `translate(-${((elem.tie)*100).toFixed(3)}%, 0)`,
+              left: `${100-((elem.tie)).toFixed(3)}%`,
+              transform: `translate(-${100-((elem.tie)).toFixed(3)}%, 0)`,
             }} 
             className={styles['example']}
           >

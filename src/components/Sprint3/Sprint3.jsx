@@ -45,9 +45,9 @@ const Sprint3 = ({data}) => {
         <button>Submit</button>
       </form>
       {arrayResult.length > 0 && <h3>Nearest Neighbors</h3>}
-      <ol>
-        {arrayResult.map(elem => <li key={Math.random()}>{elem.name}.......{(elem.tie*100).toFixed(1) } %</li>)}
-      </ol>
+      <ul>
+        {arrayResult.map((elem, index) => <li key={Math.random()}>{index+1} {elem.name}.......{(elem.tie).toFixed(1) } %</li>)}
+      </ul>
       <Visualization neighbors={arrayResult}/>
     </div>
   )

@@ -1,9 +1,8 @@
-import React, { useEffect, useState, Fragment } from 'react'; 
+import React, { useEffect, useState} from 'react'; 
 import Sprint1 from './components/Sprint1'; 
 import Sprint2 from './components/Sprint2/Sprint2'; 
 // import ChartExample from './components/ChartExample'; 
 import { csvParser } from './modules/csvParser';
-import Visualization from './components/Sprint3/Visualization/Visualization'; 
 
 import  fetchCSV  from './modules/fetchCSV'; 
 import DATA from './data/sp3.csv'; 
