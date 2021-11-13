@@ -5,8 +5,8 @@ import { checkAngle} from './CosenusSimilarity/checkAngle';
 
 
 const Sprint2 = ({data}) => {
-  const nameHeader = 'Nombre'; 
-  const names = data.parsedData.map(name => name[nameHeader]); 
+  const firstColumnName = data.headers[0]; 
+  const names = data.parsedData.map(name => name[firstColumnName]); 
   const [inputValues, setInputValues] = useState({input1:names[0], input2:names[0]}); 
   const [isFixed, setIsFixed] = useState(false); 
   const [similarityPercentage, setSimilarityPercentage] = useState(0); 
@@ -20,8 +20,7 @@ const Sprint2 = ({data}) => {
 
   const handleButtonClick = () => {
     setIsFixed(false); 
-    const dataArray = data.parsedData.filter(name => name[nameHeader]===inputValues.input1 || name[nameHeader]===inputValues.input2);
-    // console.log(dataArray, '😔😔😔'); 
+    const dataArray = data.parsedData.filter(name => name[firstColumnName]===inputValues.input1 || name[firstColumnName]===inputValues.input2);
     if (dataArray.length === 1){
       setSimilarityPercentage(100); 
       return; 
@@ -32,7 +31,7 @@ const Sprint2 = ({data}) => {
       setIsFixed(true); 
       // return; 
     }; 
-    const similarityConstant = cosineSimilarityFunc(dataArray); 
+    const similarityConstant = cosineSimilarityFunc(dataArray, firstColumnName); 
     setSimilarityPercentage(similarityConstant); 
   }
   return(

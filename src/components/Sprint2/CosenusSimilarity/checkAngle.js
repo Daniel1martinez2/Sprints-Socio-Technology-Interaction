@@ -18,6 +18,5 @@ export const checkAngle = ([rowA, rowB]) => {
 export const fixedSim = ([rowA, rowB]) => {
   const a = getMagnitude(rowA); 
   const b = getMagnitude(rowB); 
-  console.log(a,b);
   return a === b ? 1 : (Math.abs(a - b) / Math.max(a, b)); 
 }

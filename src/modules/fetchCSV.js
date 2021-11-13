@@ -5,7 +5,6 @@ async function getData(DATA) {
       }
     })
     .catch(function () {
-      console.log("error");
     });
   const data = await response.text();
   return data;
