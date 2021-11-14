@@ -1,14 +1,7 @@
-import React, {useState} from 'react'
-
-const Slider = ({handleSetSlider, name}) => {
-  const [slidersData, setSlidersData] = useState(1); 
-  const handleChange = (e) => {
-    const sliderValue = e.target.value; 
-    setSlidersData(sliderValue)
-    handleSetSlider(sliderValue)
-  }
+import styles from './Slider.module.css'; 
+const Slider = ({handleSetSlider, name, value, onChange}) => {
   return (
-    <div>
+    <div className={styles['slider']}>
       <span>{name}</span>
       <input 
         type="range" 
@@ -16,8 +9,8 @@ const Slider = ({handleSetSlider, name}) => {
         min="0" 
         max="1"
         step="0.1"
-        value={slidersData}
-        onChange={handleChange}
+        value={value}
+        onChange={onChange}
       />
     </div>
   )

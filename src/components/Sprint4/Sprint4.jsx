@@ -1,32 +1,43 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import Slider from '../../UI/Slider/Slider'; 
+import { nanoid } from 'nanoid'
 
 const Sprint4 = ({data}) => {
-  // console.log(data.parsedData);
-  const formRef =  useRef();
+  const [state, setState] = useState(false); 
   const {parsedData} = data; 
   const dataValues = Object.keys(parsedData[0]).splice(1); 
-  console.log(dataValues);
+  const defaultData = dataValues.map( dv => ({id: dv.split(' ').join(''), value: 0}))
+  const [values, setValues] = useState(defaultData); 
+
   const handleSetSlider = (value) => {
-    // console.log(value);
+
   }
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('----------------------------------------------------------------');
-    const editedWeights = dataValues.map( w => formRef.current[w].value)
-    console.log(editedWeights);
+    console.log(values);
+    setState(prev => !prev)
+  }
+  //set
+  const onChange = (id, newData) =>{
+    const copy = [...values]; 
+    const current = copy.findIndex(e => e.id === id); 
+    console.log(current);
+    if(current === -1) return
+    copy[current].value = newData; 
+    setValues(copy); 
   }
   return (
     <div className="sprint">
-      <h1>Sprint 4</h1>
-      <form onSubmit={handleSubmit} ref={formRef}>  
-        {dataValues.map((elem, index) => (
+      <h2>Sprint 4</h2>
+      <form onSubmit={handleSubmit} className="sprint4__form">  
+        {values.map((elem, index) => (
           <Slider
-            key={Math.random().toString()}
+            key={elem.id}
             handleSetSlider={handleSetSlider} 
-            name={elem}
-            // value={elem}
-            // setValue={(e) => handleSetSlider(index, e.target.value)}
+            name={elem.id}
+            onChange={(e) => onChange(elem.id, parseFloat(e.target.value))}
+            value={elem.value}
           />
         ))}
         <button>Submit</button>

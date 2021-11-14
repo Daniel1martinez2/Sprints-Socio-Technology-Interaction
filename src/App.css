@@ -160,5 +160,10 @@ button{
   flex-direction: column; 
   gap: .53em; 
   list-style: none;
+}
 
+.sprint4__form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em; 
 }
